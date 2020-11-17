@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>St. Xavier's School, Ranchi Website by Shourya</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat+Alternates:wght@500&family=Piedra&family=Martel:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header" style="text-align:center;">
+                    <a class="navbar-brand" href="https://stxaviersschool.com" target="_blank"><u>St. Xaviers
+                            School</u></a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li style="font-size: 10px;"><a href="#home" data-toggle="tooltip" data-placement="bottom"
+                            title="Home">Home</a>
+                    </li>
+                    <li style="font-size:10px;"><a href="#bestplaces" data-toggle="tooltip" data-placement="bottom"
+                            title="Best Places">Best
+                            Places</a></li>
+                    <li style="font-size: 10px;"><a href="#achiev" data-toggle="tooltip" data-placement="bottom"
+                            title="Achievements">Achievements</a></li>
+                    <li style="font-size: 10px;"><a href="#notice" data-toggle="tooltip" data-placement="bottom"
+                            title="Notice-Board">News</a></li>
+                    <li style="font-size:10px;"><a href="#bbook" data-toggle="tooltip" data-placement="bottom"
+                            title="Best Book">Best
+                            Book</a></li>
+                    <li style="font-size: 10px;"><a href="#contacts" data-toggle="tooltip" data-placement="bottom"
+                            title="Contacts">Contacts</a></li>
+                    <li style="font-size: 10px;"><a href="#reviews" data-toggle="tooltip" data-placement="bottom"
+                            title="Reviews">Reviews</a></li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input list="search" type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <datalist id="search">
+                        <option value="Home">
+                        <option value="Best Places">
+                        <option value="Achievements">
+                        <option value="News">
+                        <option value="Best Book">
+                        <option value="Contacts">
+                        <option value="Reviews">
+                    </datalist>
+                    <button type="submit" onclick="scroll()" class="btn btn-default"><span
+                            class="glyphicon glyphicon-search"></span></button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <section id="home" class="text-gray-700 body-font">
+        <center>
+            <h1 class="home_head">
+                <u>Home</u>
+            </h1>
+            <div class="container px-5 py-24 mx-auto flex flex-col">
+                <div class="lg:w-4/6 mx-auto">
+                    <div style="height:300px!important;" class="rounded-lg h-64 overflow-hidden">
+                        <img alt="content" class="object-cover object-center h-full w-full"
+                            src="https://www.stxaviersschool.com/x/img/sl1.jpg">
+                    </div>
+                    <div class="flex flex-col sm:flex-row mt-10">
+                        <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+                            <div
+                                class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
+                                <img
+                                    src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxQSEBITEhMTExMVFhUVExgXFxgVERUWFxIWFhcSFxUYHSggGBolGxUVITEhJSkrLi4uFx8zODM4NygtLisBCgoKDg0OGhAQGy0lHyUtLy0tLS0tLS0tKy8tLS0tLS0tLSstLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAwQFBgcBAgj/xABEEAABAwIEAwQGBwUIAQUAAAABAAIDBBEFBiExEkFRBxMiYRQycYGRoRYzQlRysbIVFyM0UyQlUmKCksHwczU2Q0Tx/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAECAwQF/8QAKxEAAgIBAwQBAwMFAAAAAAAAAAECEQMSITEEIkFREzJhgZGx0RQjUnGh/9oADAMBAAIRAxEAPwDZEIQgBCEIAQhCAEIQgBCEIAQhCAEIQgBCEIAQhCAEIQgBCEIAQhCAEIQgBK0+5SSVp9ygHCEIQDJCEIAQhCAChF10ICGxPNNJTvDJp2MceRTT6eYd96j+ayvtlivWss27uG9velcv4fTYhh74WsayrYN9NSvSsEdKk3yWjTznvDxvVR/NdbnrDz/9qO3PdY5kCenZUupqyMHUxgkDe9uaQz3lr0GrJAHcyElnQDzWo4cbyab2FG0uz1h/3qO3LdH08w770z5rEsp4lT085bVRccTwADYeEnmbrZsOybh88bZI2BzXC4tZYyYoQk1uKF/p5h33qP5rn09w771H817Z2fUX9IfJe/oBRf0h8AuX9v2QR+nuHfeo/mj6e4d97j+aX+gFF/SHwC4cg0X9IfAKdnsCX09w771H80HPuHcqqP5rxUZJw+Npc9jWt5k2TN+CYSIi+8fAOeiqjF+X+gHwz7h33qP5rv09w770z5qtYG/B6l7o2tY0tJAvbW3NTseXMMe7gYI3OHIWummPNv8AQC/09w771H80HPuHfe4/mlhkOit9UPgEhXZEou7eRELhrjsOilQ9glcKxunqrmnlbIBvbkpBZh2LsAdUBtrAuA9zlp6uSOl0AQhCwAStPuUklafcoBwhCEAyQhCAEIQgBdbuuIB+CAyjH5YRjbG1FuB8bm69SbCyqGP0z8GxRszA7uS67ejhbX2qQ7XxxVrORAu087g6J5lzG4q+D0Gv9e1o5D61/aV7lGUYcWmVhmvA2V8ba+ht3gsXtb13JsOa5l3M8NdEaDEhwvHhY86Ob7SVGOw2uwObjZeWnJ5XLeE9fOylp4aDF2ccTm09UORs3iKnbVLj36MlbzHlOeiLrs76DcPAvZvtS+R87SUDxd3eU7jtuW3/ACCc02ZKvDH9xWsM1OdCXAm7fJPsaypBVxek4c4G4u6Lp5cIXTUpdmTjwym0YLi0dTEJYnBzSE/Ll8zZTzTPh09ncQYDZ8Z5DyC+g8vY1HVwiSJwIO4vqD0XjzYJY3uCWD01xLEGwRPkf6rQSfYE4VF7Tc2w0tPJCSHSPaQG+0dFzjFylQKxmTtA/aI9Eoo3F7judR5lSOXOyhrY2+lTSOcdS1rjwa8rKLyLhbqSgkrmNb3zvE240AI2VlpM1VD8IfWva0SN4rAerobLclvceLKOJuy6jI8PGw9Wmx+KqtZlaowmo9Kgc6aIG7mklz7K/wCV8zR1EMZe9glc0OIv5dE/qMWgJdG5zXHZwvss9+69DciMr56grXcDARIB4geRVjrvqpPwO/SVj5dHhGLl5H8GZoAPIFxvda3JO2SmdIwgtdG4gjn4SpNbpoGcdjW9Rta7v1FaYsu7F/Xqfa79RWorpl+ogIQhcgCVp9ykkrT7lAOEIQgGSEIQAhCEALrSuLrd1GDC+1/SuYSfsnT3qk963cOAP2TfULUcxYXHWY3HDITbu3fmrGOyei6fJfTXVKEFH7GrM6y12hmMej1nDNCdifE6yeY/kmKVnpuGP19YsB1b5ABXaq7J6MscALGxsbLJqKumwutlZC8ubG6xaT4XDzXOMlNN4ufK9mWiewDNUVQ00WKMs4+FryPE07XuVF4nhlTglQJYHF9O7VpBuwt8yOasOP4TT4vSmqprNnaLuYNHEjyUZkjHDMx+G1puNQwu3aQNG/FSFNe/f2/0CTqMPgxmlNRAOCqYLuA0v7VUst5inw+Y8OnCbSR8jY6ut1TimM+B4h4riJx1t6rh081Ys64Eysa2uorHQd4wfEm3VbUko6Zbw9+QjVcq5kirYRLGQXW1bzb7lQe3jCYzDHOA0S8VieZAGyzXAceloZ+9gJGv8SM6A+5aZXwxY/T8cczmysFxFsOIDp0XH4nhmpeGUeYRWcWBDhFyGAEdDZMcK4jl2Vha/is/S3+ZVrJGYDQ1L6Wr9QOs4bi626gdTyRARBhY7ks5JuDr72QyOthMUlCYmEExx8dhpbS91I4rC+DEBLA0yiUjvGuFw23RakaCP+m3TbyVbzVmWkoIy93AZDsBqbrnHKm3L2Vso3aK5k2JUcT7amMub5HlZa4+BsdM5jAA1sbgANvVWTZVymcVmGI1Ejmlr/AB0B0Wt1LbQSDezHfpKkq2IZf2MfWVXtd+orUVl3Yv69T7XfqK1FXL9QBCELmAStPuUklafcoBwhCEAyQhCAEIQgBdYei4hvJAZq//ANwxf+N35rU7LKa+pZFmCJzzwt7t2vvWhfSKm/qs+IW8idJpAkKr1Hewr5ix4/2+qI18a+iJ8w05aQJWkkWGoWFY5luqfV1Do4+Jj3XBXo6JqDaltZeSLwHFXUdQ2eMnhuO8HUDfRWjPOX21LGYhQgAmznhvrcW9yFANyvWk27nfROsv4pU4TP8AxoyYXaPab8Oul16M0Y3cHuGqJjAMdgxSD0LEPDMBaOQ+sD71E+iV2CynhvLTk6W1aW9TZWfGMpUeJs9IoJBHLvw7Fx6KCpM1VWHv9Hr2GWH1TxbBu2hXKKcrcfyv4Mj6WhosWYJYHCnqh67dA1xPmVVHGqwirD7Frha4H1bx0uprM+WGPj9Owwnu/Wc1uhb7lK5PxqPFYHUVaAZWg928+sHbBai9rW8f2KLYVlqkxouqBMY5zq9gt63l1UJUYfiNFVilgfI4Xsw/Z955KBrKWpwqtIY5zXNPhdtxNC2vIOdYa9oDwGVDR4gfzBK55E4b8x8Az3ME+OQAcbnWdp4Txb+5TmWuzH0qFs1bK90jtbHktckjB3APtXoAWsNF5nlvxQI7AMGbSwiJmrQbp1XfVSfgd+kpw0JHEfqZfwO/Irk13WUyvsX+sqva79RWorLuxY+Op9rv1Faiu+X6iAhCFyAJWn3KSStPuUA4QhCAZIQhACEIQAusC4utKAwvte1rWa+IN+V1SBCDzd8Srz2wRFtbG8jw8O/vVIfK3rdfawq8ar0bSBkfC+IgkeMcyvpvLbR6JFsTwjWy+ZDIC+LX7Y0X07lj+Uh/CF4+trtIyS4B0HwVT7SqRjqGRzmBxGytoKrfaL/ISf8AeS8GN9xD5zwqaSO0sLyx4Jt8VoeF43FisJpatoE4HgceZGgKzektwi50ufzSzpbOa9rrPYQ5pHlsvszxKcVKPJdOxOZdxSXCK98EpPcuNngjwnkLJXOmW5KSZldSXMbiHgt1s7fkrHHFDjdKGvc1lZGLX5kqFwzGqvCpTTV0ZkpzprqAD9q68rauoru9ezBNU9fTY5TNilcIq1g8LjuSNeaolbTVOH1F3BzJYzcOGod012VuxrKMVTEazC5LPHidGDrfe67lXMrKv+xYkBxHwscRY3Vi9MXW68r0C+9nefo65gZKQ2dosQT61uavQXzZm7LcmGVDXxOPCTxMeNhro1af2c5/bUgQVDg2YWAv9pefLg7dceCmjptiH1Mv4HfpKWJ0SNf9TJ+B36SvLGrKZZ2LDx1Ptd+orUVl3Yubvqfa79RWor0ZvqICEIXIAlafcpJK0+5QDhCEIBkhCEAIQhACOWnvQUWQFIzdhcdTXwwyC7Cy/wA09b2Y0Fh/DPxK7ix/vWD/AMZ/NXQLTnJJUy2Ug9mdCzxtjPE3UalZ/inaFV09RLBERwRHhAsNludR6jvYV8x5hP8Ab6v8a9PSpZX3+AWA9qNedvyCkMtZyqMRqBS1OsbgbjQKgBysHZk7+9Gewr1ZcOJRbijVGrN7KsPt9WevrFd/dZQf0zfb1iruNgghfK+WadJmbPnbPeXf2VVRup5C3juWb+G3XqpnAs3RV7PQ8RaBIRZkpsLk6AJTty/mKe+x4rLOZog4anxD1SNCD7V9THjeWCfkrRN1lPUYJXBzHHuyfDza5nPyUvnLBm1kDcSpBY7yBu4tz0TjBK9uJURoZ3NE7BaJzvWIA67qCwPF58HqHQzsLoXaOadiPK65u72Xd5XswWrKONR4rRGjqXATNHgvvoLBUXG8HmoZQyS7S0/w5BsfgrJi+URLauwuTUnidG0+IO3PuT7D84RVDDSYvHwu9XiIsR71ITcHcVt5QLH2a9orZQKeqdaQaNcftcgFo9ebwyfgd+kr5+zNkaSBoqKJ3exDxDh3aN7kq1ZB7RRJA+mqTZ7WOa0nn4VzzYYN6sW6KhXsXbZ9SOd3fqK1FZd2LDx1PmXfqWorz5E1LcrBCELBAStPuUklafcoBwhCEAyQhCAEIQgAoPJBXAAgKbmetZDiUMkjg1oZa59qsAzjR/12fFZ324C/djyGvvWW+ijSxd8V7cfTqcUVI+k5c4UbmkCdhJ0AusVxnK1ZLVzyRQucyR12utoQqsyLhfEQXfWAb+a+oMt/ysX4QpOL6Z7F2R8+tyZX7dy74KVyhgdRRVjaipjLIwCCSLALfyqn2ntvh8mwUXVyn2sXZ09olDYfxmH3rh7RKH+s34r50pIQWajmfzSr4W8J05Ls+hg+GVI07tCo34q6KWi/iCO97a3uqx+72vNjwEe5XvsMFqaS3ktQXnfUZMNxW5mz5rxHJlfTAVAY67LHwix96tGEZmpMSiEGIsEcg049Bflutkq2hzHhwuOE+zZfMWYI2emztaCANhzB8l1xS+faWzBYsWynVYc70ihkdLDe4DSSLb6qQo8SpMai7mdrYatosHaN4ioXKWbZaJwEhMtOTYg62v7U57QMCbZuI0Rsx3idw/Z+Gyul6qn+GRoa4Xi1Tg9Z3ExLoToQ7VvATvqn2f8AKrC0V9H9W8cTw3qeltk8ppRjdAWODfSom3uPWc0CwC99mWO92JqCqtoHAB3KzfNRuu5crkiJbsON2Sny/wCVqSzfsjpuGSoI9U3t09ZaQvNmdytmmCEIXIgJWn3KSStPuUA4QhCAZIQhACEIQAm9XXxxFge4N4zwtvzKcKmdpeGPqGQCJwbKx/E3W2qqV7ArXbiw2jd9kAC/vWY983YuA6LZcWg/aWFviFjNBpIT1aLmyiOzTL1FV0vBIwOmZfjuNd17cGdY40zSbRlzHtL4fECe8b+a+osu/wArF+EKvns8omeIRi4Fxos0xbPdXBUywQ8PdxnhbdTJJ9VKkRm9hqqXal/6dIsn/eNXnmz4qRy1meoxCoFNU2LHA3sua6SWPuZaM8pJWhnrDc/mlnzNLT4hst8b2YUVvU+S5+7Gi/wfJetddjXgWQ/YcR6K+3ktM1WOZ2q34RJDFR2Akve+myr7e0LENdWfFeT+mlmbknRKPoGo9R/4T+S+XsflArp7lo9qnGdodcHNDi0hzgDryJstWocl0s7GzSRNL3gE6LcNXTO5Ky8GBMmaQQXNsfgrP2d40I5XUkrg6nn0HFq1th8lro7PaK9+6b7LLLO1TJ3okrJYPCwm+mwst/Osva/wHuRZbJg2Kg3/AIb3Akj1eAm9k+7TMK4Xsrqfi4JhxOcOROlrqQqm/tjC7gN9IgBvb1i1o0UZlqunrWxYbw+EWLy7dvAb2U+TTu+V/wBM0aF2bltJhQmn8J1Lr7kXV3o6lssbZG+q4Aj2FZtnxrp4300R4I6ZjXSW04hayvuWGgUVOBsI22+C8ct9yskkLpN/+VxZICVp9ykkrT7lAOEIQgGSEIQHVH4njMVPbvXcN9rp+SonMOX4q2IskaCfsk7g9VUEeqfMdO8gB4F9iSAFXKmpEuKgNkD2t4SADcBJ5dw+m4/Q54m8bPDGTu4Dcq00GV6eCUyxxgOIsrJRNPbgrBjNDiJaQO4nu55/zO0sq7iDX4ViwmaLUs5HFbYC3NXztAoe9pbjRzXBwPPTVJUtC3EMOa2YA3BF9yLLSkqsPgscdQ2WLvGG7XNuPeF81ZgH94Vf41f8AxqbCql1HWX7h1+6fuBc+EX2Gig8dyLVy1c00PC+KU8THA3uF36d/FK3wEU0bX//AFWDs1NsTYddjolD2eYgBfu26ealMn5TqaOrFTUgNYAb6r15cuOUHubbTN3bsF1Vb6fUQ/8AlHyXP3gUX9X8l8rRL0czOe2539rp/wDUqCVpWfsLkxSSKWjs9rL316qtfu5xD/A34r6eDLCKSkbToqsnrx/jb+oL6hy//LR/hH5LBh2b1xcxzg0MaQTr0N1q+H51pIY2xvkAcwAFcesn8rWkyy4XVB7ZiBQO0ubaHmNVKntCof6n5Kmdp+aqaqoy2N9zb3ry9Pjkppy4IZ/lfHnUEveNsWuaAW9fctFy5CyminxGUcJnN4wNxxCw0VZ7NclurJBPOzghbbhB+0R5FaBmmFprKWmAAi4b8P2dDovV1UoynUfBUrY0gwh0eE1Mst3TSNcSTvwk3HyVnyrWRmjgaJGEhjQRcXBtspmWma+Pu3AFhaAR5KK/YVLTMc8RtaAC722XibtkJB9UwOa3iF3bDql1Vsrxmoe6qc3+GfqL7t5HTkrSoGcStPuUklafcoQcIQhAMkIQgC6D/wBPkhHmEBBZowzib30LR6RH6jtiG/aUhh2OxSUwmL7NGji7TUb7pvmHF2QROB8TnCwaNyToqjgGTp52D0pxZDxFwhG1ieqtbbloVzJnB1Q10VHEZBrxOIIFudjzUvkCvjdSsiabPZfiadDqeislDhsUDAyNjWsA/wC6qs5jywXk1FE8MnGp4bEP8ldSqkUlMxYFDWxOimaD/hPNp5FZ5RyV2CvLX3nowfCd3BvsCs2E5xItFWtMMwNgd2u5Xvsra5jZGEHhe12+xCJyiqfBkZZfzTT1kYfC8a6Fp0dfpZMe0of3fIq9jHZu0P76hkNPIDew1BPvUPmjGcRjpHQ1NPxt270G5PnwhajFOSaKZTTQNLLlu5Ot9d17dSsAPh5LsQAu2x018Q4SL+RSpcLEXB0X2YKOxvZmydh7P7K73LS1lXY7iUUNMRJI1p03IV4qM30bPWlb7tV8XNCetuvJgl676qT8LvyXyvXQh9VNcX1P5rbsW7TqXgeyHjkcQWgBjra6brNKLItdVyGUR90x5JvfW1+hXfpWot6ioq76ZgIHBc8gLkn3K75J7Mn1LhPUN7qLQtb19oOyvmUezmGks+T+NL1Ollb66sZCwueQxg57fJazdVq2iiHulp2sY1jQA1oAHTTmqLnWstVwyQASSRixA1Fr63svOJZlnrXCGhHAwmz5T4SBzIB3Vpy1leOkaTfvJXaved3HqvKm4uyxdHrAszw1HgvwyAC7XeHXyvumWapzJNHTtFwbOPsB1S+YcqMnLZYz3UzTdrh1VSw7EZqSvH7QuSQWxybixOmylJ7oKjRYImsaGtHC1uwSi4xwIuCHA7FdUMglafcpJK0+5QDhCEIBkhCEABA0QhAUrNVNJT1MdY1pljZfib7edlasBxyGrjD4nDzGxB5iydPaCLEAg9dQqVjGVpIZDUYe7gfu9nJw6AbBV7opcMYqmRxkyHwnw/FZ1BikkFUWUbjKAfFFyF/8xU5Bj0dVEaesaYZdteZ63TZuU5KWnqHwvEsjwOAjca9VuDSVUESFVXUla0RVLQ1/TofxBRwwWsoTekf6RDyjvsOnEq7jmFzUkLS8Gcy2HCPC5r3c7r1h2KVFDSmR0/G9trwEeIX5cR3WpY/8Slops+saQ2qidCTpsXa+5WCixinqBZj2uH+a3/KqsWcYnRsNdTCHi9W4BuV6fg2G1Hja5zHHazi0fBYaITGK5Koap3FLC1x6g2/JQ9T2U0J9VnD7yvf0QqWfy9c1jeh8X/KX/ZOJsGlU13+n5rUZyXDKM/3VUYFmgt9hKc0vZjQs9dheeXiK6KPFNu+H+1KTYTiThrWNYPNirlOSpyJpJygwSmgbaNjG+2x/NI4nmWlp/rJALf4Rf8lS4KVksjmTVXflujy27QD0UlRUuFQlwBu8bhxLvzWXFij3WZ0km8NHTmW+zvVt56rtJlOepDX4jNxM37r1beVxulH51hY8QQxDjI8Ow05FN8RbNKQ2pqBFxX4Y+Z8rhRR9gVzHWUkXDEwjjZYsjbuSNhcKCp8xVI46gyktjIBp7agHz52TChnhg7yV0ZfVtJDWk38I9VyuGWxHOwVNRB3TrXJJ0PnZaaS5KWPLmNsq4RIy/mCLWKj81VMMhbTmMTSkg8I0sOvEmzK505fHRARNtYS28N+eilcFwhsANzxyu1e88zztfZctNO0ZF8MpBFE1gFred7J0jkPNCAErT7lJJWn3KAcIQhAMkIQgBCEIAQPLRCEBH4tgsNSzgkb53Gjr+1VuWiraC5gd38A2itd4H4irogD/ALyVspTm5spaktjqR3MjSHcLuRCVzBk+Kukhla8BrdTY+t7VO12DQTAh8bbnmAA74quyZJMTg+kmex45PcXN+CJtAQxLAp5sRja9gNLEGFmn2huq3jz3T4g6BjC0NDgLaDTmra7EcSheGvZ3w5ljbIlxNrye+pnsdzcLA/FdMc9LujSTIXJeBxvL2OqXPmZyDneHXmrhW4rLBNHCyMvZYAuuojCMboqdziB3bnbl25S89TQTTic1BDwLWDiG/BZm9TI4suQPzTLF6Dv4yy5bfQ9U0GZaUW/jssuHNFNoGytcTsOpWIqV8ESMswGkZT4o6jfxGN5c7i1vceakcx5anZXRTRRnuI3cR5gi3PqrnNiUPfB/cXeNL2CcYliswIDYHOafJdNci7lTxnJ8lcGTxytZKwgtIbbQa8OikajLNO5sU1c8980eIhxA+AUlU0ta7h7uWKJp3aW+L2L1T5Uj4w+Rz3yc7uJZ8Fi7BD+lU4demgMztr7/AJpzDl+apdxVT+GPdsbfCQOhI3VnpqVkY8DAPclyb7pfgliFJStiaGMFmj4pZCFCAhCEAJWn3KSStPuUA4QhCAZIXrhPRHCeiA8oXrhPRHCeiA8oXrhPRHCeiA8rtl3hPRHCeiA88kXXrhPRHCeiA5fkEm6Jp3aD7UrwnojhPRANH4fCd4oz/pC5+zYeUUf+0J5wnojhPRWwNP2fD/Rj/wBoXW4fELERRgj/ACi6dcJ6I4T0UAkYWn7LfglL6rvCeiOE9EB5QV64T0RwnogOErzZe+E9EcJ6IDyheuE9EcJ6IDyheuE9EcJ6IDylafcrxwnolIBqgF0IQgBCEIAQhCAEIQgBCEIAQhCAEIQgBCEIAQhCAEIQgBCEIAQhCAEIQgBCEIAQhCAEIQgP/9k=" />
+                            </div>
+                            <div class="flex flex-col items-center text-center justify-center">
+                                <h1 class="font-large title-font mt-4 text-gray-900 text-lg">St. Xavier's School</h1>
+                                <div class="w-12 h-1 bg-orange-500 rounded mt-2 mb-4"></div>
+                                <p class="text-base text-gray-600">Affiliated to the Council for the Indian School
+                                    Certificate
+                                    Examination, New Delhi</p>
+                            </div>
+                        </div>
+                        <div
+                            class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-300 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+                            <p class="leading-relaxed text-lg mb-4">St. Xavier’s School Doranda, Ranchi, is named after
+                                St. Francis
+                                Xavier, a Jesuit saint of the 16th Century who travelled to India. It was founded in
+                                1960 and is managed
+                                by the Fathers of the Society of Jesus popularly known as Jesuits. It is affiliated to
+                                the Council for
+                                the Indian School Certificate Examination, New Delhi. It prepares students for the ICSE
+                                (10th - only
+                                boys) and ISC (12th – Co-ed) examinations conducted by the Council. The School conducts
+                                classes for Plus
+                                Two in Science and Commerce streams. The management of the School is vested in the
+                                Ranchi Jesuit
+                                Society. The President of the Governing Body is Rev. Fr. Provincial of the Ranchi Jesuit
+                                Province</p>
+                            <a href="https://stxaviersschool.com" target="_blank" style="color: darkblue;"
+                                class="text-teal-500 inline-flex items-center">Learn
+                                More
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover table-dark">
+                    <thead class="thead thead-info">
+                        <tr>
+                            <th id="hash" scope="col">#</th>
+                            <th scope="col">Occasion</th>
+                            <th scope="col">Epitome(s)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Establishment</td>
+                            <td>Jesuit Society(1960) <a href="https://en.wikipedia.org/wiki/Society_of_Jesus"
+                                    target="_blank" class="know_more">Know More&rarr;</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Named After</td>
+                            <td>St. Francis Xavier <a href="https://en.wikipedia.org/wiki/Francis_Xavier"
+                                    target="_blank" class="know_more">Know More&rarr;</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Board</td>
+                            <td>ICSE(Indian School Certificate Examination, New Delhi)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Motto</td>
+                            <td><b style="font-family: 'Martel', serif;font-size: 20px;">उत्साहः सिद्धये</b> (Sanskrit
+                                for "Courage
+                                to Excel By All")</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Principal</td>
+                            <td>Father Sanjay Kerketta</td>
+                        </tr>
+
+
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>Prefect</td>
+                            <td>Mr. Raju Singh</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <td>Co-ordinator</td>
+                            <td>Mrs. Bella Mohan</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">8</th>
+                            <td>Alumini</td>
+                            <td>
+                                <ul>
+                                    <b>&bull;</b> Abhishek Choubey, Film Director and Producer<br>
+                                    <b style="margin-left:55px ;">&bull;</b> Alvin Rozario, Indian singer-songwriter and
+                                    musician.<br>
+                                    <b style="margin-left: -35px;">&bull;</b> Birendra Singh Dhanoa, Air Chief
+                                    Marshal.<br>
+                                    <b style="margin-left: 168px;">&bull;</b> Jairam Ramesh, former Indian Minister of
+                                    Environment and
+                                    Forests<br>
+                                    <b style="margin-left: -168px;">&bull;</b> Shiney Ahuja, Indian actor
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </section>
+    <section id="bestplaces" class="text-gray-700 body-font">
+        <center>
+            <h1 class="home_head">
+                <u>Best Places</u>
+            </h1>
+            <div class="container px-5 py-24 mx-auto">
+                <div class="flex flex-wrap -m-4">
+                    <div class="p-4 md:w-1/3">
+                        <div class="h-full border-2 border-gray-200 rounded-lg overflow-hidden">
+                            <img class="lg:h-48 md:h-36 w-full object-cover object-center"
+                                src="https://i.pinimg.com/236x/4c/f0/4f/4cf04fdd49c5b7ac4e695e628676a2e2.jpg"
+                                alt="blog">
+                            <div class="p-6">
+                                <h2 class="tracking-widest text-xs title-font font-large text-gray-500 mb-1">
+                                    <kbd>Library</kbd></h2><br>
+                                <mark style="background:yellow;width: 95%;">“Books are the quietest and most constant of
+                                    friends; and
+                                    the most patient of teachers.”<sub><em><br>~Charles
+                                            Eliot</em></sub></mark><br><br>
+                                <p class="leading-relaxed mb-3">A well stocked library is open to the pupils on all
+                                    class days. It is
+                                    review of them.</p>
+                                <div class="flex items-center flex-wrap ">
+                                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                                        <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor"
+                                            stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M5 12h14"></path>
+                                            <path d="M12 5l7 7-7 7"></path>
+                                        </svg>
+                                    </a>
+                                    <span
+                                        class="text-gray-600 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15"
+                                            viewBox="0 0 226 226" style=" fill:#000000;">
+                                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                                stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                                stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                                                font-weight="none" font-size="none" text-anchor="none"
+                                                style="mix-blend-mode: normal">
+                                                <path d="M0,226v-226h226v226z" fill="none"></path>
+                                                <g fill="#f44336">
+                                                    <path
+                                                        d="M160.08333,28.25c-19.662,0 -36.96983,10.06171 -47.08333,25.29317c-10.11821,-15.23146 -27.42133,-25.29317 -47.08333,-25.29317c-31.20212,0 -56.5,25.29787 -56.5,56.5c0,56.23162 103.58333,113 103.58333,113c0,0 103.58333,-56.28813 103.58333,-113c0,-31.20213 -25.29787,-56.5 -56.5,-56.5">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg>&nbsp;1.2K
+                                    </span>
+                                    <span class="text-gray-600 inline-flex items-center leading-none text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26"
+                                            viewBox="0 0 172 172" style=" fill:#000000;">
+                                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                                stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                                stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                                                font-weight="none" font-size="none" text-anchor="none"
+                                                style="mix-blend-mode: normal">
+                                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                                <g fill="#000000">
+                                                    <path
+                                                        d="M65.32692,0c-0.95613,0.15505 -1.88642,0.49099 -2.6875,1.03365c0,0 -8.3726,5.27163 -17.36538,10.95673c-8.99279,5.6851 -19.01923,11.96454 -21.29327,13.23077c-0.12921,0.05169 -0.28426,0.12921 -0.41346,0.20673c-8.32091,5.11659 -10.05228,13.48919 -10.33654,18.19231c-0.02584,0.20673 0,0.38762 0,0.62019c-0.07753,1.75721 0,2.89423 0,2.89423v86.41346c0,12.5589 14.62621,18.60577 28.52885,18.60577c4.6256,0 9.25121,-0.7494 13.23077,-2.06731c2.63582,-1.31791 4.54808,-3.97956 4.54808,-6.61538v-69.46154c0,-15.22055 3.30769,-22.3786 13.23077,-28.32212c2.63582,-1.31791 30.38942,-20.46635 30.38942,-20.46635c1.31791,-1.31791 2.6875,-4.00541 2.6875,-5.99519v-0.62019c0,-2.63581 -1.31791,-4.67728 -3.30769,-5.99519c-1.98978,-1.31791 -4.6256,-1.31791 -6.61538,0c-0.67187,0.67188 -41.01022,27.83113 -49.61538,32.45673c-8.60517,5.29747 -16.61599,6.56371 -18.60577,3.92788c-0.62019,-0.62019 -1.16286,-2.50661 -1.24038,-4.34135c0,-0.05168 0,-0.15504 0,-0.20673c0,-0.07753 0,-0.12921 0,-0.20673c0,-1.80889 0.46515,-5.19411 4.13462,-7.44231c3.72115,-2.06731 12.94651,-7.95913 21.91346,-13.64423c3.79868,-2.40324 4.26382,-2.66166 7.23558,-4.54808c0.82692,3.33353 4.05709,5.50421 7.46815,4.96154c3.38522,-0.54267 5.81431,-3.59195 5.55589,-7.02885v-9.92308c0.02584,-1.91226 -0.80108,-3.72115 -2.22235,-4.98738c-1.42128,-1.26623 -3.33354,-1.86058 -5.21996,-1.62801zM118.25,23.15385c-1.05949,0.18089 -2.04147,0.59435 -2.89423,1.24038c0,0 -33.30949,22.40445 -39.07212,26.25481c-0.07753,0.07753 -0.12921,0.12921 -0.20673,0.20673c-4.78065,3.59195 -7.6232,7.85577 -8.88942,11.78365c-0.90445,2.76503 -1.03365,5.03906 -1.03365,6.82212c0,0.7494 0,1.60217 0,2.06731c0,0.20673 0,0.41346 0,0.62019v80.00481c0,12.5589 14.47115,19.84615 27.70192,19.84615c5.94351,0 11.31851,-1.29206 15.29808,-3.92788c7.93329,-4.6256 46.30769,-34.52404 46.30769,-34.52404c1.98978,-1.31791 3.30769,-3.17849 3.30769,-5.16827v-86c0,-3.30769 -1.29206,-5.29747 -3.92788,-6.61538c-1.98978,-1.31791 -5.24579,-0.69772 -7.23558,0.62019c-10.59495,7.93329 -39.07212,30.33774 -45.6875,34.31731c-9.2512,5.29747 -17.98558,6.61538 -21.29327,3.30769c-1.31791,-1.31791 -1.24038,-2.55829 -1.24038,-4.54808c0.05169,-1.13702 0.15505,-2.11899 0.41346,-2.89423c0.36178,-1.16286 1.13702,-2.58413 3.92788,-4.75481c0.12921,-0.10337 0.07753,-0.10337 0.20673,-0.20673c4.78065,-3.17849 19.40685,-13.15324 28.94231,-19.63942c1.11118,2.9976 4.21214,4.75481 7.36478,4.21214c3.12681,-0.56851 5.42669,-3.28185 5.45253,-6.48618v-9.92308c0.02584,-1.91226 -0.80108,-3.72115 -2.22235,-4.98738c-1.42128,-1.26622 -3.33354,-1.86058 -5.21996,-1.62801zM145.53846,71.52885v13.23077l-33.07692,25.63462v-13.23077z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg>&nbsp;350
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 md:w-1/3">
+                        <div class="h-full border-2 border-gray-200 rounded-lg overflow-hidden">
+                            <img class="lg:h-48 md:h-36 w-full object-cover object-center"
+                                src="https://i.pinimg.com/236x/5f/ba/67/5fba6776f21744f41f854fd8884bae85.jpg"
+                                alt="blog">
+                            <div class="p-6">
+                                <h2 class="tracking-widest text-xs title-font font-large text-gray-500 mb-1">
+                                    <kbd>Computer Lab</kbd>
+                                </h2><br>
+                                <mark style="background:yellow;width: 95%;">“Software is a gas; it expands to fill its
+                                    container.”<sub><em> ~Nathan Myhrvold</em></sub></mark><br><br>
+                                <p class="leading-relaxed mb-3">A well-established Computer Lab with more than 60
+                                    computers is availed
+                                    for the students to learn to grow with technology.</p>
+                                <div class="flex items-center flex-wrap">
+                                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                                        <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor"
+                                            stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M5 12h14"></path>
+                                            <path d="M12 5l7 7-7 7"></path>
+                                        </svg>
+                                    </a>
+                                    <span
+                                        class="text-gray-600 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15"
+                                            viewBox="0 0 226 226" style=" fill:#000000;">
+                                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                                stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                                stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                                                font-weight="none" font-size="none" text-anchor="none"
+                                                style="mix-blend-mode: normal">
+                                                <path d="M0,226v-226h226v226z" fill="none"></path>
+                                                <g fill="#f44336">
+                                                    <path
+                                                        d="M160.08333,28.25c-19.662,0 -36.96983,10.06171 -47.08333,25.29317c-10.11821,-15.23146 -27.42133,-25.29317 -47.08333,-25.29317c-31.20212,0 -56.5,25.29787 -56.5,56.5c0,56.23162 103.58333,113 103.58333,113c0,0 103.58333,-56.28813 103.58333,-113c0,-31.20213 -25.29787,-56.5 -56.5,-56.5">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg>&nbsp;1.8K
+                                    </span>
+                                    <span class="text-gray-600 inline-flex items-center leading-none text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26"
+                                            viewBox="0 0 172 172" style=" fill:#000000;">
+                                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                                stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                                stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                                                font-weight="none" font-size="none" text-anchor="none"
+                                                style="mix-blend-mode: normal">
+                                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                                <g fill="#000000">
+                                                    <path
+                                                        d="M19.84615,0c-10.95673,0 -19.84615,8.88942 -19.84615,19.84615v86c0,10.95673 8.88942,19.84615 19.84615,19.84615h132.30769c10.95673,0 19.84615,-8.88942 19.84615,-19.84615v-86c0,-10.95673 -8.88942,-19.84615 -19.84615,-19.84615zM19.84615,13.23077h132.30769c3.64363,0 6.61538,2.97176 6.61538,6.61538v72.76923c0,3.64363 -2.97176,6.61538 -6.61538,6.61538h-132.30769c-3.64363,0 -6.61538,-2.97176 -6.61538,-6.61538v-72.76923c0,-3.64363 2.97176,-6.61538 6.61538,-6.61538zM6.61538,132.30769c-3.64363,0 -6.61538,2.94592 -6.61538,6.61538v26.46154c0,3.66947 2.97176,6.61538 6.61538,6.61538h158.76923c3.66947,0 6.61538,-2.94591 6.61538,-6.61538v-26.46154c0,-3.66947 -2.94591,-6.61538 -6.61538,-6.61538zM152.15385,144.29808c4.34135,0 7.85577,3.51442 7.85577,7.85577c0,4.34135 -3.51442,7.85577 -7.85577,7.85577c-4.34135,0 -7.85577,-3.51442 -7.85577,-7.85577c0,-4.34135 3.51442,-7.85577 7.85577,-7.85577zM13.23077,145.53846h86v6.61538h-86z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg>&nbsp;64
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 md:w-1/3">
+                        <div class="h-full border-2 border-gray-200 rounded-lg overflow-hidden">
+                            <img class="lg:h-48 md:h-36 w-full object-cover object-center"
+                                src="https://i.pinimg.com/236x/37/f7/bd/37f7bd49ee71a9172b2960cba062e419.jpg"
+                                alt="blog">
+                            <div class="p-6">
+                                <h2 class="tracking-widest text-xs title-font font-large text-gray-500 mb-1">
+                                    <kbd>Gymnasium</kbd>
+                                </h2><br>
+                                <mark style="background:yellow;width: 95%;">“A bear, however hard he tries, grows tubby
+                                    without
+                                    exercise.”<br><sub><em> ~A.A. Milne</em></sub></mark><br><br>
+                                <p class="leading-relaxed mb-3">A gymnasium offers healthy exercise for us. Regular PT
+                                    and games are
+                                    conducted.</p>
+                                <div class="flex items-center flex-wrap">
+                                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                                        <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor"
+                                            stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M5 12h14"></path>
+                                            <path d="M12 5l7 7-7 7"></path>
+                                        </svg>
+                                    </a>
+                                    <span
+                                        class="text-gray-600 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15"
+                                            viewBox="0 0 226 226" style=" fill:#000000;">
+                                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                                stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                                stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                                                font-weight="none" font-size="none" text-anchor="none"
+                                                style="mix-blend-mode: normal">
+                                                <path d="M0,226v-226h226v226z" fill="none"></path>
+                                                <g fill="#f44336">
+                                                    <path
+                                                        d="M160.08333,28.25c-19.662,0 -36.96983,10.06171 -47.08333,25.29317c-10.11821,-15.23146 -27.42133,-25.29317 -47.08333,-25.29317c-31.20212,0 -56.5,25.29787 -56.5,56.5c0,56.23162 103.58333,113 103.58333,113c0,0 103.58333,-56.28813 103.58333,-113c0,-31.20213 -25.29787,-56.5 -56.5,-56.5">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg>&nbsp;1.8K
+                                    </span>
+                                    <span class="text-gray-600 inline-flex items-center leading-none text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26"
+                                            viewBox="0 0 172 172" style=" fill:#000000;">
+                                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                                stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                                stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                                                font-weight="none" font-size="none" text-anchor="none"
+                                                style="mix-blend-mode: normal">
+                                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                                <g fill="#000000">
+                                                    <path
+                                                        d="M19.84615,13.23077v6.61538h-19.84615v13.23077h19.84615v6.61538h13.23077v-26.46154zM138.92308,13.23077v26.46154h13.23077v-6.61538h19.84615v-13.23077h-19.84615v-6.61538zM39.69231,19.84615v13.23077h92.61538v-13.23077zM19.84615,66.15385v6.61538h-19.84615v13.23077h19.84615v6.61538h13.23077v-26.46154zM138.92308,66.15385v26.46154h13.23077v-6.61538h19.84615v-13.23077h-19.84615v-6.61538zM39.69231,74.00962v10.75c1.55048,0 4.34135,1.03365 7.64904,2.6875c3.30769,1.65385 7.13221,3.92788 12.19712,3.92788c5.0649,0 9.92308,-2.06731 14.88462,-3.72115c4.96154,-1.65385 10.02644,-2.89423 11.57692,-2.89423c1.55048,0 6.61538,1.24038 11.57692,2.89423c4.96154,1.65385 9.81971,3.72115 14.88462,3.72115c5.0649,0 8.88942,-2.27404 12.19712,-3.92788c3.30769,-1.65385 6.09856,-2.6875 7.64904,-2.6875v-10.75c-5.0649,0 -8.88942,2.27404 -12.19712,3.92788c-3.30769,1.65385 -6.09856,2.6875 -7.64904,2.6875c-1.55048,0 -6.61538,-1.24038 -11.57692,-2.89423c-4.96154,-1.65385 -9.81971,-3.72115 -14.88462,-3.72115c-5.0649,0 -9.92308,2.06731 -14.88462,3.72115c-4.96154,1.65385 -10.02644,2.89423 -11.57692,2.89423c-1.55048,0 -4.34135,-1.03365 -7.64904,-2.6875c-3.30769,-1.65385 -7.13221,-3.92788 -12.19712,-3.92788zM66.15385,112.46154c-14.6262,0 -26.46154,11.83534 -26.46154,26.46154c0,14.62621 11.83534,26.46154 26.46154,26.46154h39.69231c14.62621,0 26.46154,-11.83533 26.46154,-26.46154c0,-14.6262 -11.83533,-26.46154 -26.46154,-26.46154zM19.84615,125.69231v6.61538h-19.84615v13.23077h19.84615v6.61538h13.23077v-26.46154zM66.15385,125.69231h39.69231c7.88161,0 13.23077,5.34916 13.23077,13.23077c0,7.88161 -5.34916,13.23077 -13.23077,13.23077v-19.84615h-13.23077v19.84615h-13.23077v-19.84615h-13.23077v19.84615c-7.88161,0 -13.23077,-5.34916 -13.23077,-13.23077c0,-7.88161 5.34916,-13.23077 13.23077,-13.23077zM138.92308,125.69231v26.46154h13.23077v-6.61538h19.84615v-13.23077h-19.84615v-6.61538z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg>&nbsp;16
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="achiev" class="text-gray-700 body-font overflow-hidden">
+        <h1 style="text-align: center!important;" class="home_head">
+            <u>Achievements</u>
+        </h1>
+        <div class="container">
+            <div class="card">
+                <div class="circle">
+                    <h2 class="heading_of_card">01.<br>DOX Interschool Competition</h2>
+                </div>
+                <div class="content"><img style="display: inline;" src="https://img.icons8.com/plasticine/x/books.png"
+                        alt="">
+                    <p class="para">The DOX Competitions is conducted by the
+                        Alumini of St. Xavier’s School and is an Academic competition consisting of Economics, Poetry
+                        Writing,
+                        History, Polity and Hindi among schools from Ranchi. Our School stood first&#129351;.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="circle" id="no3circle">
+                    <h2 class="heading_of_card">02.<br>Zonal Basket-Ball Championship</h2>
+                </div>
+                <div class="content"><img style="display: inline;"
+                        src="https://img.icons8.com/cotton/x/basketball--v2.png" alt="">
+                    <p class="para">The Zonal Basket-Ball Championship was held amongst three districts; Ranchi,
+                        Hazaribagh and
+                        Bokaro. 25 schools participated in this zonal competition. We won the First Prize&#129351;.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="circle" id="no2circle">
+                    <h2 class="heading_of_card">03.<br>All-Ranchi Debate<br> Competition</h2>
+                </div>
+                <center>
+                    <div class="content"><img style="display: inline;"
+                            src="https://img.icons8.com/color/2x/opposite-opinion.png" alt="">
+                        <p class="para">The All-Ranchi Debate Competition was held amongst<b
+                                style="font-size: inherit;"> ALL
+                            </b>schools of Ranchi. It was held in 3 levels; Class Level, School Level and final Zonal
+                            Level. This
+                            event was scheduled for two months. I won the first prize&#129351;! I have the pic in the
+                            below carousel.
+                            The topic was "Absolute Freedom".</p>
+                    </div>
+                </center>
+            </div>
+        </div>
+        <center>
+            <div id="myCarousel" width="95%" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="https://www.stxaviersschool.com/x/img/sldr_111.jpg" alt="Los Angeles">
+                        <div class="carousel-caption" style="color:#000!important">
+                            <h1 class="font-large" style="text-align: center!important;">Zonal Basket-Ball Championship
+                            </h1>
+                            <p style="color:#000!important">The Captain of Our BasketBall Team</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="https://www.stxaviersschool.com/x/img/sldr_091.jpg" alt="Chicago">
+                        <div style="color: #fff!important;" class="carousel-caption">
+                            <h1 class="font-large" style="text-align: center!important;">DOX InterSchool Competition
+                            </h1>
+                            <p style="color: #fff!important;">Economics Wing</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="https://www.stxaviersschool.com/x/img/sldr_107.jpg" alt="New York">
+                        <div style="color: #000!important;" class="carousel-caption">
+                            <h1 class="font-large" style="text-align: center!important;">ALl Ranchi Debate Competition
+                            </h1>
+                            <p style="color: #000!important;">I stood first&#129351; in the All Ranchi Debate
+                                Competition.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </center>
+    </section><br><br><br>
+    <section id="notice" align="center">
+        <center>
+            <h1 class="home_head"><u>Notice Board</u></h1><br>
+            <div style="display: inline-block;" class="col-md-6" style="padding: 22px 9px 2px;">
+
+
+                <div class="panel panel-info">
+
+                    <div class="panel-heading"> General info</div>
+                    <div class="panel-body">
+
+
+                        <a class="notice_board_anchors"
+                            href="https://www.stxaviersschool.com/x/2017/0107202004_45_27_01_07_2020_notc.pdf"
+                            target="_blank"><i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp; <span
+                                style="color:OrangeRed "><b>Notice for
+                                    ICSE 2020 Class
+                                    X</b></span></a><img src="https://www.stxaviersschool.com/x/new08zap.gif">
+                        <br>
+                        <a class="notice_board_anchors" href="https://www.stxaviersschool.com/x/hld_hw_2020.php"
+                            target="_self"><i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp; <span
+                                style="color:OrangeRed "><b>Holiday
+                                    Homework Assignments for Class
+                                    Prep &amp; KG (2020-21)</b></span></a><img
+                            src="https://www.stxaviersschool.com/x/new08zap.gif">
+                        <br>
+                        <a class="notice_board_anchors" href="https://www.stxaviersschool.com/x/proj_2021.php"
+                            target="_self"><i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp; <span
+                                style="color:OrangeRed "><b>Projects for
+                                    Classes VI to X &amp; XII -
+                                    Senior Section (Session : 2020-21)</b></span></a><img
+                            src="https://www.stxaviersschool.com/x/new08zap.gif">
+                        <br>
+                        <a class="notice_board_anchors"
+                            href="https://www.stxaviersschool.com/x/2017/1605202006_31_39_onln_fee_pymnt_sxd.pdf"
+                            target="_blank"><i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp; <span
+                                style="color:OrangeRed "><b>Online Fee
+                                    Payment for SXD</b></span></a><img
+                            src="https://www.stxaviersschool.com/x/new08zap.gif">
+                        <br>
+                        <a class="notice_board_anchors" href="https://www.stxaviersschool.com/x/proj_2020.php"
+                            target="_self"><i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp; <span
+                                style="color:OrangeRed "><b>Assignment 3
+                                    for Class PREP &amp; KG
+                                    2020-21</b></span></a>
+                        <br>
+                        <a class="notice_board_anchors" href="https://www.stxaviersschool.com/x/proj_2020.php"
+                            target="_self"><i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp; <span
+                                style="color:OrangeRed "><b>Assignment 2
+                                    for Class Prep &amp; KG
+                                    2020-21</b></span></a>
+                        <br>
+                        <a class="notice_board_anchors" href="https://www.stxaviersschool.com/x/txt_bk.php"
+                            target="_self"><i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp; <span
+                                style="color:OrangeRed "><b>Text Books
+                                    for Senior &amp; Junior
+                                    Section (Session : 2020-21)</b></span></a>
+                        <br>
+                        <a class="notice_board_anchors" href="https://www.stxaviersschool.com/x/proj_2020.php"
+                            target="_self"><i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp; <span
+                                style="color:OrangeRed "><b>Home
+                                    Assignments for New KG and PREP
+                                    2020-21</b></span></a>
+                        <br>
+                        <a class="notice_board_anchors" href="https://www.stxaviersschool.com/x/proj_2020.php"
+                            target="_self"><i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp; <span
+                                style="color:OrangeRed "><b>Home
+                                    Assignments for Junior Section (Prep
+                                    to V) (Session : 2020-21)</b></span></a>
+                        <br>
+                        <a class="notice_board_anchors" href="https://www.stxaviersschool.com/x/proj_2020.php"
+                            target="_self"><i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp; <span
+                                style="color:OrangeRed "><b>Topics for
+                                    the Project Works for Classes
+                                    VI to X and XII -2020</b></span></a>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" style="padding: 0px 9px 2px;">
+
+
+                <div class="panel  panel-success">
+
+                    <div class="panel-heading"> Admission/Exam</div>
+                    <div class="panel-body">
+                        <a class="notice_board_anchors" href="https://www.stxaviersschool.com/x/sylb_2021.php"
+                            target="_self"><i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp; <span
+                                style="color:OrangeRed "><b>Revised
+                                    Syllabus 2020-21 (Junior
+                                    Section)</b></span></a><img src="https://www.stxaviersschool.com/x/new08zap.gif">
+                        <br>
+                        <a class="notice_board_anchors"
+                            href="https://www.stxaviersschool.com/x/2017/0606202007_40_48_06_06_2020_cls_tst_rtn_i_v_2020.pdf"
+                            target="_blank"><i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp; <span
+                                style="color:OrangeRed "><b>Routine for
+                                    Class Test for Classes I to V (Primary Section) - 2020</b></span></a><img
+                            src="https://www.stxaviersschool.com/x/new08zap.gif">
+                        <br>
+                        <a class="notice_board_anchors"
+                            href="https://www.stxaviersschool.com/x/2017/0506202011_39_06_05_06_2020_tst_shdl_vi_xii.pdf"
+                            target="_blank"><i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp; <span
+                                style="color:OrangeRed "><b>Routine for Class Test for Classes VI
+                                    to XII - 2020</b></span></a>
+                        <br>
+                        <a class="notice_board_anchors" href="https://www.stxaviersschool.com/x/sylb_2021.php"
+                            target="_self"><i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp; <span
+                                style="color:OrangeRed "><b>Syllabus for
+                                    Classes VI to X (Senior
+                                    Section)</b></span></a>
+                        <br>
+                        <a class="notice_board_anchors"
+                            href="https://www.stxaviersschool.com/x/2017/0104202012_14_18_01_04_2020_admn_notc_cls_i_ix_2020_21.pdf"
+                            target="_blank"><i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp; <span
+                                style="color:OrangeRed "><b>Notice for
+                                    Parents regarding Admission in Class I - IX (Session 2020-21)</b></span></a>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" style="padding: 22px 9px 2px;">
+
+
+                <div class="panel panel-primary">
+
+                    <div class="panel-heading"> Awards &amp; Achievements</div>
+                    <div class="panel-body">
+                        <a class="notice_board_anchors"
+                            href="https://www.stxaviersschool.com/x/2017/2310201911_11_14_23_10_2019_master_sheersh_sen_achv.pdf"
+                            target="_blank"><i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp; <span
+                                style="color:OrangeRed ">
+                                <b>Master Sheersh Sen brings laurels for St. Xavier`s Doranda</b></span></a><img
+                            src="https://www.stxaviersschool.com/x/new08zap.gif">
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </section>
+    <br>
+    <br>
+    <br>
+    <section id="bbook">
+        <h1 class="home_head" style="height:90px;">
+            <u>Best Book</u>
+        </h1>
+        <div class="p-4 md:w-1/3"><center>
+            <div class="h-full border-2 border-gray-200 rounded-lg overflow-hidden center">
+                <img class="object-cover object-center"
+                    src="https://baazimagess3.s3-ap-southeast-1.amazonaws.com/bk_images/005/9788184970005.jpg"
+                    alt="blog">
+                <div class="p-6">
+                    <h2 class="tracking-widest text-xs title-font font-large text-gray-500 mb-1">
+                        <kbd>Lulu In Zog-Zog</kbd>
+                    </h2><br>
+                    <mark style="background:yellow;width: 95%;"><em>Book by S. A. Hemma</em></mark><br><br>
+                    <p class="leading-relaxed mb-3">On a trip to Uncle Anatole's place in Peru, Lulu's plane develops a snag. Lulu has to jump out of the plane in a parachute and he lands in the Amazon forest where he meets Zog-Zog.</p>
+                    <div class="flex items-center flex-wrap">
+                        <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" href="https://www.amazon.in/Lulu-Zog-Zog-Fiction-Editions-Hemma/dp/8184970005">Learn More
+                            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                        <span
+                            class="text-gray-600 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15"
+                                viewBox="0 0 226 226" style=" fill:#000000;">
+                                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                    stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                    stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                                    font-weight="none" font-size="none" text-anchor="none"
+                                    style="mix-blend-mode: normal">
+                                    <path d="M0,226v-226h226v226z" fill="none"></path>
+                                    <g fill="#f44336">
+                                        <path
+                                            d="M160.08333,28.25c-19.662,0 -36.96983,10.06171 -47.08333,25.29317c-10.11821,-15.23146 -27.42133,-25.29317 -47.08333,-25.29317c-31.20212,0 -56.5,25.29787 -56.5,56.5c0,56.23162 103.58333,113 103.58333,113c0,0 103.58333,-56.28813 103.58333,-113c0,-31.20213 -25.29787,-56.5 -56.5,-56.5">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>&nbsp;86% readers like it
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div></center>
+    </section><br><br><br>
+    <section id="contacts">
+        <h1>
+            <u style="display:inline-block;width: 100%;text-align: center;" class="home_head">Contacts</u>
+        </h1><br>
+        <iframe style="border: 3px solid black;"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3663.3858081595004!2d85.31323781483756!3d23.338033084794187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4e1b56dad4b43%3A0xd1b4b9ff853b9a74!2sSt.%20Xavier&#39;s%20school%20doranda!5e0!3m2!1sen!2sin!4v1596712836167!5m2!1sen!2sin"
+            width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0">Sorry, Your Browser doesn't support Google Maps or either your are offline. Try back online and
+            on Google Chrome or Microsoft Edge</iframe><br>
+        <center>
+            <br>
+            <div class="col-lg-3 col-md-3 col-sm-3 contacts_div">
+                <div class="section-heading">
+                    <h2 class="font-large">Contact Info</h2>
+                    <hr style="border-color: black!important;width: 100%;"><a
+                        href="https://maps.google.com/maps?ll=23.338167,85.32553&z=16&t=m&hl=en&gl=IN&mapclient=embed&cid=15110907156837931636"
+                        target="_blank">
+                        <address class="contact-info">
+                            <p><span class="fa fa-home"></span>P.O. Doranda, Post Box-16,
+                                Ranchi-834002,jharkhand.</p>
+                    </a><a href="tel:+910651-2253777">
+                        <p><span class="fa fa-phone"></span>(+91) 0651-2253777</p>
+                    </a><a href="tel:+910651-2252666">
+                        <p><span class="fa fa-phone"></span>(+91) 0651-2252666</p>
+                    </a><a href="mailto:info@stxaviersschool.com?subject=Good Morning">
+                        <p><span class="fa fa-envelope"></span>info@stxaviersschool.com</p>
+                    </a>
+                    </address>
+                </div>
+            </div>
+        </center>
+    </section>
+    </center>
+    </center><br><br>
+    <section id="reviews"><br><br><br><br><br><br><br><br><br><br><br>
+        <h1 align="center" class="home_head"><u>
+                Reviews
+            </u></h1>
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-12">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Post a review!</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Your review is a very valuable gift for us.</p>
+            </div>
+            <div align="center" class="lg:w-1/2 md:w-2/3 mx-auto">
+                <div class="flex flex-wrap -m-2">
+                    <div class="p-2 w-1/2">
+                        <input
+                            class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2"
+                            placeholder="Name" type="text">
+                    </div>
+                    <div class="p-2 w-1/2">
+                        <input
+                            class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2"
+                            placeholder="Email" type="email">
+                    </div>
+                    <div style="width: 100%;">
+                        <label id="class">Class : 1</label><br>
+                        <input id="class_slider" type="range" min="1" max="12" value="0" step="1">
+                    </div>
+                    <div class="p-2 w-full">
+                        <label>Your Review</label>
+                        <textarea
+                            class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none h-48 focus:border-indigo-500 text-base px-4 py-2 resize-none block"
+                            placeholder="Review"></textarea>
+                    </div>
+                    <div class="rate">
+                        <input type="radio" id="star5" name="rate" value="5" />
+                        <label for="star5" title="text">5 stars</label>
+                        <input type="radio" id="star4" name="rate" value="4" />
+                        <label for="star4" title="text">4 stars</label>
+                        <input type="radio" id="star3" name="rate" value="3" />
+                        <label for="star3" title="text">3 stars</label>
+                        <input type="radio" id="star2" name="rate" value="2" />
+                        <label for="star2" title="text">2 stars</label>
+                        <input type="radio" id="star1" name="rate" value="1" />
+                        <label for="star1" title="text">1 star</label>
+                    </div>
+                    <div class="p-2 w-full">
+                        <button onclick="review()" class="btn btn-info">Post My Review</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr style="border-color: black;">
+    <center>
+        <ul class="pagination">
+            <li>
+                <a href="https://www.facebook.com/StXaviers-School-Doranda-Ranchi-222465314471196/?ref=br_rs"
+                    target="_blank">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/school/st.-xavier's-school-ranchi/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <li>
+                <a href="" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a href="" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </li>
+        </ul>
+    </center>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>
